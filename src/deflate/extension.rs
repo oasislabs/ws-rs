@@ -36,7 +36,7 @@ pub struct DeflateSettings {
     /// compressed message.
     /// This setting may be different from the `fragments_capacity` setting of the WebSocket in order to
     /// allow for differences between compressed and uncompressed messages.
-    /// Default: 10
+    /// Default: 100
     pub fragments_capacity: usize,
     /// Indicates whether the extension handler will reallocate if the `fragments_capacity` is
     /// exceeded. If this is not true, a capacity error will be triggered instead.
@@ -51,7 +51,7 @@ impl Default for DeflateSettings {
             max_window_bits: 15,
             request_no_context_takeover: false,
             accept_no_context_takeover: true,
-            fragments_capacity: 10,
+            fragments_capacity: 100,
             fragments_grow: true,
         }
     }
