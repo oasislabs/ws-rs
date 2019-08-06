@@ -146,7 +146,7 @@ pub struct Settings {
     /// Default: false
     pub panic_on_shutdown: bool,
     /// The maximum number of fragments the connection can handle without reallocating.
-    /// Default: 10
+    /// Default: 100
     pub fragments_capacity: usize,
     /// Whether to reallocate when `fragments_capacity` is reached. If this is false,
     /// a Capacity error will be triggered instead.
@@ -243,7 +243,7 @@ impl Default for Settings {
             queue_size: 5,
             panic_on_new_connection: false,
             panic_on_shutdown: false,
-            fragments_capacity: 10,
+            fragments_capacity: 100,
             fragments_grow: true,
             fragment_size: u16::max_value() as usize,
             in_buffer_capacity: 2048,
