@@ -16,7 +16,7 @@ fn apply_mask(buf: &mut [u8], mask: &[u8; 4]) {
     }
 }
 
-const MAX_FRAME_PAYLOAD_SIZE: u64 = 5 * 1024 * 1024;
+const MAX_FRAME_PAYLOAD_SIZE: u64 = 10 * 1024 * 1024;
 
 /// A struct representing a WebSocket frame.
 #[derive(Debug, Clone)]
